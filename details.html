@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+
+	<!-- Bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- Font Awesome -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+	<!-- Sweet Alert -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<!-- Estilo propio -->
+	<link rel="stylesheet" href="styles.css">
+
+	<title>Amazing Events - Details</title>
+</head>
+<!-- DETAILS -->
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<!-- TODO EL CONTAINER DE LA NAVBAR -->
+				<a class="navbar-brand ms-5" href="./index.html">
+					<img src="assets/img/Logo_Amazing_Events.png" alt="Amazing Events Logo" width="120" height="36">
+				</a>
+				<!-- TOGGLE PARA PAGINA REDUCIDA -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- DIV PARA LOS BOTONES -->
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+						<ul class="navbar-nav justify-content-around ms-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="./index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="./upcoming_events.html">Upcoming Events</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="./past_events.html">Past Events</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="./contact.html">Contact</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="./stats.html">Stats</a>
+							</li>
+						</ul>
+				</div>
+		</nav>
+	</header>
+
+	<main>
+
+		<!-- UN SIMPLE BANNER PARA INDICAR, REDUNDANTEMENTE, EN QUE PAGINA ESTOY PARADO -->
+		<div id="giant-banner" class="container-fluid d-flex justify-content-between align-items-center">
+			<div class="d-flex">
+				<a href="./past_events.html" class="carrousel-button d-none">&lt;</a>
+			</div>
+			<h2> Details</h2>
+			<div class="d-flex">
+				<a href="./stats.html" class="carrousel-button d-none">></a>
+			</div>
+		</div>
+
+		<!-- SECCION PARA EL FILTRO DE BUSQUEDA -->
+		<div class="container mt-3 p-1 d-none" id="div-formulario">
+			<form class="d-xl-flex flex-wrap justify-content-lg-around justify-content-md-around">
+
+					<div class="d-inline-block categories">
+						<!-- CHECKBOXES PARA APLICAR FILTROS POR CATEGORÍA -->
+						<div class="container d-sm-flex my-1 gap-2">
+							<div class="form-check ">
+								<input type="checkbox" class="form-check-input" id="a">
+								<label class="form-check-label" for="a">Category</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="b">
+								<label class="form-check-label" for="b">Category</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="c">
+								<label class="form-check-label" for="c">Category</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="d">
+								<label class="form-check-label" for="d">Category</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="e">
+								<label class="form-check-label" for="e">Category</label>
+							</div>
+						</div>
+
+					</div>
+
+
+					<!-- INPUT PARA ESCRIBIR -->
+					<div class="d-flex div-search">
+						<input class="form-control search-input" id="search" type="search" placeholder="Search" aria-label="Search">
+						<button type="submit" class="btn btn px-2" id="lupita"><i class="fa fa-search fa-lg"></i></button>
+					</div>
+
+			
+			</form>
+
+
+	</div>
+
+		<!-- SECCION PARA LA CARTA DETALLADA -->
+		<!-- <div class="container my-4 p-3 d-none" id="card-details">
+				<div class="card-details-all p-3">
+					<div class="row g-0">
+						<div class="col-6 card-left d-flex flex-column align-items-center justify-content-center">
+							<img src="./assets/img/Cinema.jpg" alt="Trendy Pants and Shoes"	class="img-fluid">
+							<h4 class="card-category mt-2 text-center">Category here</h4>
+						</div>
+						<div class="col-6 card-right">
+							<div class="card-details-body">
+								<div class="pt-3 px-2 px-md-3 d-md-flex justify-content-md-between">
+									<h3 class="card-title">Cinema</h3>
+									<h3 class="pe-5 italic">$1800</h3>
+								</div>
+								<p class="card-text mb-0 ms-2 ms-md-4">
+									<small class="text-muted">Date: 23-02-2023</small>
+								</p>
+								<p class="card-text mb-2 ms-2 ms-md-4">
+									<small class="text-muted">Place: S.C. de Bariloche</small>
+								</p>
+								<div class="description">
+									<p class="card-text mt-1 mt-md-4 px-2 px-md-3">
+										This is a wider card with supporting text below as a natural lead-in to
+										additional content. This content is a little bit longer.
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo corporis distinctio delectus eaque sunt itaque, beatae commodi accusantium, labore voluptatibus voluptates exercitationem, et sequi vel a porro adipisci quibusdam earum.
+										Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis maiores incidunt est corrupti error molestias laboriosam illo, quod facilis doloremque, suscipit, odit vitae iure. Exercitationem, velit. Earum, distinctio cum.
+									</p>
+								</div>
+
+								<p class="card-text mt-1 mt-md-2 mb-0 ms-2 ms-md-4">
+									Capacity: 120
+								</p>
+								<p class="card-text mb-2 ms-2 ms-md-4">
+									Confirmed: 67
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+		</div> -->
+
+		<!-- NUEVA CARTA DETALLADA QUE TIENE QUE QUEDAR RESPONSIVE -->
+		<div class="container-fluid justify-content-center p-0 p-sm-1 p-md-3" id="card-details">
+			<div class="d-flex flex-column flex-md-row justify-content-center align-items-center " id="details">
+				<div class="d-flex flex-column details-shadow-default" id="details-image">
+					<img src="./assets/img/Cinema.jpg" alt="Trendy Pants and Shoes"	class="img-fluid">
+					<h4 class="card-category mt-2 text-center">Category here</h4>
+				</div>
+				<div class="details-shadow-default" id="details-info">
+
+					<div class="d-flex justify-content-between px-4 py-2" id="details-head">
+						<h3 class="card-title">Cinema</h3>
+						<h3 class="italic">$1800</h3>
+					</div>
+
+					<div class="px-4 px-md-2" id="details-date-place">
+
+						<p class="m-1">
+							<small class="text-muted">Date: 23-02-2023</small>
+						</p>
+						
+						<p class="m-1">
+							<small class="text-muted">Place: S.C. de Bariloche</small>
+						</p>
+					</div>
+					
+					<div class="px-3 px-md-2 py-0 details-shadow-default" id="details-description">
+						<p class="details-text">
+							This is a wider card with supporting text below as a natural lead-in to
+							additional content. This content is a little bit longer.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo corporis distinctio delectus eaque sunt itaque, beatae commodi accusantium, labore voluptatibus voluptates exercitationem, et sequi vel a porro adipisci quibusdam earum.
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum perspiciatis maiores incidunt est corrupti error molestias laboriosam illo, quod facilis doloremque, suscipit, odit vitae iure. Exercitationem, velit. Earum, distinctio cum.
+						</p>
+					</div>
+					<div class="px-3 px-md-2 flex-row flex-wrap flex-md-column" id="details-footer">
+						<p class="my-0 ms-2">
+							<span class="cap-conf">Capacity:</span> 120
+						</p>
+						<p class="my-0 ms-2">
+							<span class="cap-conf">Confirmed:</span> 67
+					</div>
+					</p>
+				</div>
+			</div>
+		</div>
+	
+	</main>
+
+
+
+	<!-- FOOTER -->
+	<footer class="footer fixed-bottom d-flex flex-wrap justify-content-around bg-light border-danger">
+
+		<ul id="ul_iconos" class="d-flex list-unstyled mt-1 mb-0">
+			<li>
+					<a class="btn btn-outline-danger btn-floating rounded-circle mx-1 mx-lg-3" href="#" role="button">
+					<i class="fab fa-instagram"></i>
+					</a>
+			</li>
+			<li>
+					<a class="btn btn-outline-danger btn-floating rounded-circle mx-1 mx-lg-3" href="#" role="button">
+					<i class="fab fa-facebook-square"></i>
+					</a>
+			</li>
+			<li>
+					<a class="btn btn-outline-danger btn-floating rounded-circle mx-1 mx-lg-3" href="#" role="button">
+					<i class="fab fa-whatsapp"></i>
+					</a>
+			</li>
+		</ul>
+
+		<span id="cohort-msg" class="text-muted">Cohort FE03-TT</span>
+
+</footer>
+
+	<!-- FUNCIONALIDADES BOOTSTRAP 5 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	<!-- Modelo de datos para las tarjetas -->
+	<script src="./assets/js/data.js"></script>
+	<!-- Archivo para colocar funciones comunes -->
+	<script src="./assets/js/common.js"></script>
+	<!-- Función para generar las tarjetas -->
+	<script src="./assets/js/details.js"></script>
+</body>
+
+</html>

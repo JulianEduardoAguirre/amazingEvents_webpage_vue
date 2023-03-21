@@ -27,9 +27,8 @@ createApp({
 				.then(data => {
 					// console.log(data)						//PERFECTO
 					this.currentDate = data.currentDate;
-					this.events = data.events;
-					console.log(this.events)
-					this.backupEvents = data.events;
+					this.events = data.events.filter( event => event.date < data.currentDate);
+					this.backupEvents = data.events.filter( event => event.date < data.currentDate);
 					this.getCategories(data.events)
 				})
 			},
@@ -53,11 +52,6 @@ createApp({
 				}
 			}
 		}
-
-
-
-
-
 
 }).mount("#app")
 

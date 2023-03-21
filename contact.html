@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+	<!-- Bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- Font Awesome -->
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+	<!-- Sweet Alert -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<!-- Estilo propio -->
+	<link rel="stylesheet" href="styles.css">
+
+	<title>Amazing Events - Contact</title>
+</head>
+<!-- CONTACT -->
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<!-- TODO EL CONTAINER DE LA NAVBAR -->
+				<a class="navbar-brand ms-5" href="./index.html">
+					<img src="assets/img/Logo_Amazing_Events.png" alt="Amazing Events Logo" width="120" height="36">
+				</a>
+				<!-- TOGGLE PARA PAGINA REDUCIDA -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- DIV PARA LOS BOTONES -->
+				<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+						<ul class="navbar-nav justify-content-around ms-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" role="button" href="./index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="./upcoming_events.html">Upcoming Events</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="./past_events.html">Past Events</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="#">Contact</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link btn-j px-3 py-1" aria-current="page" href="./stats.html">Stats</a>
+							</li>
+						</ul>
+				</div>
+		</nav>
+	</header>
+
+	<main>
+
+		<!-- UN SIMPLE BANNER PARA INDICAR, REDUNDANTEMENTE, EN QUE PAGINA ESTOY PARADO -->
+		<div id="giant-banner" class="container-fluid d-flex justify-content-between align-items-center">
+			<div class="d-flex">
+				<a href="./past_events.html" class="carrousel-button giant-banner-small">&lt;</a>
+			</div>
+			<h2 class="giant-banner-small"> Contact Us</h2>
+			<div class="d-flex">
+				<a href="./stats.html" class="carrousel-button giant-banner-small">></a>
+			</div>
+		</div>
+
+		<!-- SECCION PARA EL FILTRO DE BUSQUEDA -->
+		<div class="container mt-3 p-1 d-none" id="div-formulario">
+			<form class="d-xl-flex flex-wrap justify-content-lg-around justify-content-md-around">
+
+					<div class="d-inline-block categories">
+						<!-- CHECKBOXES PARA APLICAR FILTROS POR CATEGORÍA -->
+						<div class="container d-sm-flex my-1 gap-2">
+							<div class="form-check ">
+								<input type="checkbox" class="form-check-input" id="a">
+								<label class="form-check-label" for="a">Category</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="b">
+								<label class="form-check-label" for="b">Category</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="c">
+								<label class="form-check-label" for="c">Category</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="d">
+								<label class="form-check-label" for="d">Category</label>
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="e">
+								<label class="form-check-label" for="e">Category</label>
+							</div>
+						</div>
+
+					</div>
+
+
+					<!-- INPUT PARA ESCRIBIR -->
+					<div class="d-flex div-search">
+						<input class="form-control search-input" id="search" type="search" placeholder="Search" aria-label="Search">
+						<button type="submit" class="btn btn px-2" id="lupita"><i class="fa fa-search fa-lg"></i></button>
+					</div>
+
+			
+			</form>
+
+
+	</div>
+
+		<!-- SECCION PARA EL FORMULARIO -->
+		<div class="container col-sm-8 col-md-9 col-lg-8 col-xl-6 h-75 my-4 p-3" id="formulario">
+				
+			<form>
+					<!-- Name input -->
+					<div class="form-outline mb-4">
+						<input type="text" id="form4Example1" class="form-control">
+						<label class="form-label ms-2" for="form4Example1">Name</label>
+					</div>
+				
+					<!-- Email input -->
+					<div class="form-outline mb-4">
+						<input type="email" id="form4Example2" class="form-control">
+						<label class="form-label ms-2" for="form4Example2">Email address</label>
+					</div>
+				
+					<!-- Message input -->
+					<div class="form-outline mb-4">
+						<textarea class="form-control" id="form4Example3" rows="4"></textarea>
+						<label class="form-label ms-2" for="form4Example3">Message</label>
+					</div>
+				
+					<!-- Checkbox -->
+					<div class="form-check d-flex justify-content-center mb-4">
+						<input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked>
+						<label class="form-check-label" for="form4Example4">
+							Send me a copy of this message
+						</label>
+					</div>
+				
+					<!-- Submit button -->
+					<div class="d-flex justify-content-center">
+						<button type="submit" class="btn btn-danger btn-block mb-3">Send</button>
+
+					</div>
+				</form>
+
+		</div>
+	
+	</main>
+
+
+
+	<!-- FOOTER -->
+	<footer class="footer fixed-bottom d-flex flex-wrap justify-content-around bg-light border-danger">
+
+		<ul id="ul_iconos" class="d-flex list-unstyled mt-1 mb-0">
+			<li>
+					<a class="btn btn-outline-danger btn-floating rounded-circle mx-1 mx-lg-3" href="#" role="button">
+					<i class="fab fa-instagram"></i>
+					</a>
+			</li>
+			<li>
+					<a class="btn btn-outline-danger btn-floating rounded-circle mx-1 mx-lg-3" href="#" role="button">
+					<i class="fab fa-facebook-square"></i>
+					</a>
+			</li>
+			<li>
+					<a class="btn btn-outline-danger btn-floating rounded-circle mx-1 mx-lg-3" href="#" role="button">
+					<i class="fab fa-whatsapp"></i>
+					</a>
+			</li>
+		</ul>
+
+		<span id="cohort-msg" class="text-muted">Cohort FE03-TT</span>
+
+</footer>
+
+	<!-- FUNCIONALIDADES BOOTSTRAP 5 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous">
+	</script>
+	<!-- Archivo para colocar funciones comunes -->
+	<script src="./assets/js/common.js"></script>
+
+	
+</body>
+
+</html>
