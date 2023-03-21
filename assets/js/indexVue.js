@@ -40,6 +40,9 @@ createApp({
 					}
 				});
 				// console.log(this.categories);	//PERFECTO
+			},
+			goToDetails(cardId){
+				window.location.href = `./details.html?id=${cardId}`
 			}
 		},
 		computed: {

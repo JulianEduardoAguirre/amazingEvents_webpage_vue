@@ -122,7 +122,7 @@ class="relative">
 		<div class="d-flex justify-content-center align-items-center flex-wrap gap-5">
 			<h2 v-if="events.lenght == 0" class="display-1 fw-bolder"> Oops, no coincidences</h2>
 			<div v-for="evento of events" class="mb-4 d-flex justify-content-center">
-				<div class="card h-100">
+				<div class="card h-100" @click="goToDetails(evento._id)">
 					<img :src="evento.image" class="card-img-top" :alt="evento.image">
 					<div class="card-body">
 					<h5 class="card-title text-center">{{evento.name}}</h5>
@@ -134,7 +134,7 @@ class="relative">
 						<p class="card-text mb-2">{{evento.description}}</p>
 					</div>
 					<div class="card-footer">
-					<btn class="btn btn-outline-danger" >View Details</btn>
+					<btn class="btn btn-outline-info" @click="goToDetails(evento._id)">View Details</btn>
 					</div>
 				</div>
 			</div>
